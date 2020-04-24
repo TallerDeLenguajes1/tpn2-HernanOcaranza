@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctime>
 const int filas = 15;
 const int  columnas = rand() % 11 + 5;
 
@@ -18,6 +18,8 @@ void GenerarVectorPares (int * vector, int ** matriz);
 void MostrarVector (int * vector);
 
 int main () {
+    
+    srand(time(0));
     int ** pMatriz = (int **) malloc(sizeof(int*) * filas);
     int * pVecPares = (int *) malloc(sizeof(int) * filas);
     CargarMatriz(pMatriz);
