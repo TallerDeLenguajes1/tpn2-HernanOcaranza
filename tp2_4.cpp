@@ -27,6 +27,7 @@ void PcMasVieja (compu * array, int cant);
 
 void PcMasRapida (compu * array, int cant);
 
+void FreeCompleto (compu * array, int cant);
 
 // Funcion principal
 
@@ -46,7 +47,7 @@ int main() {
 
     PcMasRapida(pArrayDeCompus, cantidad);
 
-    free(pArrayDeCompus);
+    FreeCompleto(pArrayDeCompus, cantidad);
     
     getchar();
     getchar();
@@ -113,4 +114,12 @@ void PcMasRapida (compu * array, int cant) {
         }
     }
     MostrarCaracteristicas(array[ind]);
+}
+
+void FreeCompleto (compu * array, int cant) {
+    for (int i = 0; i < cont; i++)
+    {
+        free(array[i].tipoCpu);
+    }
+    free(array);
 }
