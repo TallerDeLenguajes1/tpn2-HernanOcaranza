@@ -1,0 +1,2 @@
+f) no se puede ver el archivo pues fue creado en otra rama.
+i) Me tira un error cuando ejecuto ese comando. (error reading commits: error: switch ´l´ expects a numerical value)
